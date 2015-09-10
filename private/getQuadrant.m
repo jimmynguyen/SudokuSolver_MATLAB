@@ -1,7 +1,14 @@
 function quadrant = getQuadrant(board, rowIndex, columnIndex)
 	quadrantIndex = getQuadrantIndex(rowIndex,columnIndex);
 	[rows, cols] = getRowAndColumnIndices(quadrantIndex);
-	quadrant = board(rows,cols);
+    quadrant = [];
+    for i = 1:length(rows)
+        for j = 1:length(cols)
+            if rows(i) ~= rowIndex && cols(j) ~= columnIndex
+                quadrant = [quadrant, board(rows(i),cols(j)).value];
+            end
+        end
+    end
 end
 
 % Input: quadrant (value range: [1,9])
