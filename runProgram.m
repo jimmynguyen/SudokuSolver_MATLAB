@@ -1,11 +1,9 @@
 function runProgram
-
-	f = @rumProgramHelper;
+	f = @runProgramHelper;
 	t = timeit(f)
-
 end
 
-function rumProgramHelper
+function runProgramHelper
 	% define board
 	boardValues = [7 9 0, 0 0 0, 3 0 0;...
 				   0 0 0, 0 0 6, 9 0 0;...
@@ -35,7 +33,7 @@ function rumProgramHelper
 
 	board = solve(board);
 
-	value = reshape([board.value],9,9)
+	value = reshape([board.value],9,9);
 	% possibleValues = reshape({board.possibleValues},9,9)
 	
 end

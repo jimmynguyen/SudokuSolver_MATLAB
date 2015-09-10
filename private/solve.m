@@ -1,5 +1,5 @@
 function board = solve(board)
-	board = solveHelper(board,'Naked Single')
+	board = solveHelper(board,'Naked Single');
 end
 
 function board = solveHelper(board,algorithm)

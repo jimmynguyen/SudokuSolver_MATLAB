@@ -26,7 +26,7 @@ function [board,isNakedSingleFound] = findNakedSingleHelper(board,isNakedSingleF
 			col = [board([1:rowIndex-1,rowIndex+1:end],colIndex).value];
 			
 			% get quadrant
-			quadrant = getQuadrant(board,rowIndex,colIndex)
+			quadrant = getQuadrant(board,rowIndex,colIndex);
 
 			% get possibleValuesMask possible values mask
 			possibleValues = board(rowIndex,colIndex).possibleValues;
@@ -49,7 +49,7 @@ function [board,isNakedSingleFound] = findNakedSingleHelper(board,isNakedSingleF
 
 		isNakedSingleFound = ~isequal(board, oldBoard);
 
-		[board,isNakedSingleFound] = findNakedSingleHelper(board,isNakedSingleFound)
+		[board,isNakedSingleFound] = findNakedSingleHelper(board,isNakedSingleFound);
 	end
 
 end
