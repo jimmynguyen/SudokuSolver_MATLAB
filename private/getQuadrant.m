@@ -2,9 +2,9 @@ function quadrant = getQuadrant(board, rowIndex, columnIndex)
 	quadrantIndex = getQuadrantIndex(rowIndex,columnIndex);
 	[rows, cols] = getRowAndColumnIndices(quadrantIndex);
     quadrant = [];
-    for i = 1:length(rows)
-        for j = 1:length(cols)
-            if rows(i) ~= rowIndex && cols(j) ~= columnIndex
+    for j = 1:length(cols)
+        for i = 1:length(rows)
+            if rows(i) ~= rowIndex || cols(j) ~= columnIndex
                 quadrant = [quadrant, board(rows(i),cols(j)).value];
             end
         end
