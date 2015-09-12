@@ -9,9 +9,12 @@ function board = solveHelper(board,algorithm)
 		switch algorithm
 			case 'Naked Single'
 				board = findNakedSingle(board);
-				board = solveHelper(board,'Naked Double');
-			case 'Naked Double'
-				%implement
+				board = solveHelper(board,'Naked Pairs');
+			case 'Naked Pairs'
+				[board,isNakedPairsFound] = findNakedPairs(board);
+				if isNakedPairsFound
+					board = solveHelper(board,'Naked Single');
+				end
 		end
 
 	end

@@ -1,4 +1,4 @@
-function board = findNakedSingleHelper(board)
+function board = findNakedSingle(board)
 	[board,~] = findNakedSingleHelper(board,true);
 end
 

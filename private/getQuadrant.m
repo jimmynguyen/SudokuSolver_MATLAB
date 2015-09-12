@@ -1,4 +1,4 @@
-function quadrant = getQuadrant(board, rowIndex, columnIndex)
+function [quadrant, rows, cols] = getQuadrant(board, rowIndex, columnIndex)
 	quadrantIndex = getQuadrantIndex(rowIndex,columnIndex);
 	[rows, cols] = getRowAndColumnIndices(quadrantIndex);
     quadrant = [];
