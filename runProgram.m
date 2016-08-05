@@ -81,7 +81,7 @@ function board = runProgramHelper
     board = getBoard(boardValues);
     board = solve(board);
     values = reshape([board.value],9,9)
-    isSolved = issolved(board)
+    isSolved_ = isSolved(board)
     differentWhere = values ~= boardValues
     
 end

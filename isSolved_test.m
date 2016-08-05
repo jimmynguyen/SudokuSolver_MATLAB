@@ -16,12 +16,12 @@ function issolved_test
 			 
 	% Test 1
 	board = getBoard(boardValues);
-	fprintf('Test 1: %s\n', assertTrue(issolved(board)));
+	fprintf('Test 1: %s\n', assertTrue(isSolved(board)));
 
 	% Test 2
 	boardValues(end) = 10;
 	board = getBoard(boardValues);
-	fprintf('Test 2: %s\n', assertFalse(issolved(board)));
+	fprintf('Test 2: %s\n', assertFalse(isSolved(board)));
 
 	fprintf('\n');
 

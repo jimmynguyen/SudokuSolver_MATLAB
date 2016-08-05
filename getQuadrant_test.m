@@ -32,10 +32,10 @@ function getQuadrant_test
 	fprintf('Test 4: %s\n', assertEquals(getQuadrant(board,9,6),quadrant8(1:8)));
 
 	% Test 5
-	fprintf('Test 4: %s\n', assertEquals(getQuadrant(board,8,5),quadrant8([1:4,6:9])));
+	fprintf('Test 5: %s\n', assertEquals(getQuadrant(board,8,5),quadrant8([1:4,6:9])));
 
 	% Test 6
-	fprintf('Test 4: %s\n', assertEquals(getQuadrant(board,7,5),quadrant8([1:3,5:9])));
+	fprintf('Test 6: %s\n', assertEquals(getQuadrant(board,7,5),quadrant8([1:3,5:9])));
 
 	fprintf('\n');
 

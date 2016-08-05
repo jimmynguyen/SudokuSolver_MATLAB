@@ -4,20 +4,20 @@ end
 
 function board = solveHelper(board,algorithm)
 
-    if false == issolved(board)
+    if false == isSolved(board)
 
         switch algorithm
             case 'NakedSingle'
                 board = findNakedSingle(board);
-                board = solveHelper(board,'NakedPairs');
+                board = solveHelper(board,'HiddenSingle');
             case 'NakedPairs'
                 [board,isNakedPairsFound] = findNakedPairs(board);
                 if isNakedPairsFound
                     board = solveHelper(board,'NakedSingle');
                 end
-%             case 'HiddenSingle'
-%                 board = findHiddenSingle(board);
-%                 board = solveHelper(board,'NakedPairs');
+            case 'HiddenSingle'
+                board = findHiddenSingle(board);
+                board = solveHelper(board,'NakedPairs');
         end
 
     end

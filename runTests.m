@@ -1,6 +1,6 @@
 function runTests
 
-	issolved_test
+	isSolved_test
 	getQuadrant_test
 
 end
